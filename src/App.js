@@ -24,10 +24,10 @@ function ProfileContent() {
         // Silently acquires an access token which is then attached to a request for Microsoft Graph data
         instance.acquireTokenSilent(request).then((response) => {
             console.log(response.accessToken)
-            // getAccounts(response.accessToken)
+            getAccounts(response.accessToken)
         }).catch((e) => {
             instance.acquireTokenPopup(request).then((response) => {
-                // getAccounts(response.accessToken)
+                getAccounts(response.accessToken)
             });
         });
     }
@@ -39,7 +39,6 @@ function ProfileContent() {
             headers: new Headers({
                 'Authorization': 'Bearer '+token,
             }),
-            mode: 'no-cors'
         };
         await fetch('https://stage-api-gateway.expedient.com/api/billing/account', options)
         .then((response) => response.json())
