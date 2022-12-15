@@ -1,0 +1,20 @@
+.Tile.not-in-word {
+  background-color: grey;
+}
+
+.Tile.correct {
+  background-color: green;
+}
+
+.Tile.in-word {
+  background-color: yellow;
+}
+
+.Tile {
+    border: 2px;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    color: black;
+    margin: 5px;
+}

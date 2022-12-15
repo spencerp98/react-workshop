@@ -1,0 +1,4 @@
+.TileRow {
+    flex-direction: row;
+    display: flex;
+  }
